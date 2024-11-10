@@ -24,3 +24,16 @@ Algoritmos:
 - LOT (Loteria)
 
 ## Saída
+### FIFO - First in First Out
+![FIFO](https://github.com/user-attachments/assets/49986feb-a694-4e64-a945-ab6c665d171c)
+
+### SJF - Shortest Job First
+![SJF](https://github.com/user-attachments/assets/92903099-c641-4f54-9162-e806d72cde4b)
+
+### RR - Round Robin
+
+### Prioridade
+![Prioridade](https://github.com/user-attachments/assets/161fbc58-51ef-4f35-9410-6d917ec33d75)
+
+### LOT - Loteria
+![Loteria](https://github.com/user-attachments/assets/254298cc-7286-45f3-9fee-fec72ba14d97)
