@@ -33,8 +33,8 @@ public class Process {
         return tempoRestante;
     }
 
-    public void decrementaTempoRestante() {
-        this.tempoRestante--;
+    public void decrementaTempoRestante(int tempoExecucao) {
+        this.tempoRestante = tempoRestante - tempoExecucao;
     }
 
     public void setTempoRetorno(int tempoRetorno) {

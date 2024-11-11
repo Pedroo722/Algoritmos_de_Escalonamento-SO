@@ -22,7 +22,6 @@ public class App {
             System.out.println("Processo " + p.getId() + " | Tempo Chegada: " + p.getTempoChegada() + " | Tempo Execução: " + p.getTempoExecucao() + " | Prioridade: " + p.getPrioridade());
         }
 
-
         Scanner scanner = new Scanner(System.in);
         int escolha;
 
@@ -41,48 +40,29 @@ public class App {
 
             switch (escolha) {
                 case 1:
-                    // Executar FIFO
                     System.out.println("\n== Escalonamento por FIFO ==");
                     scheduler.fifo();
-                    for (Process p : processos) {
-                        System.out.println("Processo " + p.getId() + ": Tempo Retorno = " + p.getTempoRetorno() + ", Tempo Finalizacao = " + p.getTempoFinalizacao());
-                    }
                     break;
                 case 2:
-                    // Executar SJF
                     System.out.println("\n== Escalonamento por SJF ==");
                     scheduler.sjf();
-                    for (Process p : processos) {
-                        System.out.println("Processo " + p.getId() + ": Tempo Retorno = " + p.getTempoRetorno() + ", Tempo Finalizacao = " + p.getTempoFinalizacao());
-                    }
                     break;
                 case 3:
-                    // Executar RR
                     System.out.println("\n== Escalonamento por RR ==");
-                    System.out.println("Em implementação");
-                    // scheduler.rr(2);
-                    // for (Process p : processos) {
-                    //     System.out.println("Processo " + p.getId() + ": Tempo Retorno = " + p.getTempoRetorno() + ", Tempo Finalizacao = " + p.getTempoFinalizacao());
-                    // }
+                    System.out.print("Informe a fatia de tempo: ");
+                    int fatiaTempo = scanner.nextInt();
+                    System.out.println();
+                    scheduler.rr(fatiaTempo);
                     break;
                 case 4:
-                    // Executar Escalonamento por Prioridade
                     System.out.println("\n== Escalonamento por Prioridade ==");
                     scheduler.prioridade();
-                    for (Process p : processos) {
-                        System.out.println("Processo " + p.getId() + ": Tempo Retorno = " + p.getTempoRetorno() + ", Tempo Finalizacao = " + p.getTempoFinalizacao());
-                    }
                     break;
                 case 5:
-                    // Executar Escalonamento LOT (Loteria)
                     System.out.println("\n== Escalonamento por LOT (Loteria) ==");
                     scheduler.lot();
-                    for (Process p : processos) {
-                        System.out.println("Processo " + p.getId() + ": Tempo Retorno = " + p.getTempoRetorno() + ", Tempo Finalizacao = " + p.getTempoFinalizacao());
-                    }
                     break;
                 case 0:
-                    // Sair
                     System.out.println("Saindo...");
                     break;
                 default:
